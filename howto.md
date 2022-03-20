@@ -1,13 +1,24 @@
-# Fantastic Instructions
+# tls certs
+
+use openssl to set up some server certs
+
+## references
+
+### fantastic instructions
+
 [https://gist.github.com/Soarez/9688998](https://gist.github.com/Soarez/9688998)
 
 
-# RTFM
+### rtfm
+
 [https://www.openssl.org/docs/manmaster/man7/](https://www.openssl.org/docs/manmaster/man7/)
 
 
-# Create a Proper CSR
+## how-to
 
+### create a proper csr and sign it
+
+```shell
 openssl req \
     -new \
     -newkey rsa:2048 \
@@ -36,3 +47,4 @@ openssl x509 \
     -extensions <extsection> \
     -extfile <extfile.ext> \
     -req
+```
